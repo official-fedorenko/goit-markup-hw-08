@@ -1,31 +1,30 @@
 body{
     font-family: Roboto, sans-serif;
-}
-
-header{
-    background: #ffffff;
     ul{
         margin: 0;
+        padding: 0;
+        list-style: none;
     }
 }
 
-footer{
-    background: #2F303A;
-    padding: 0;
-    margin: 0;
-}
 
-.section{
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 94px;
-    /* padding-bottom: 94px; */
-    margin: 0px auto;
-}
+// footer{
+//     background: #2F303A;
+//     padding: 0;
+//     margin: 0;
+// }
 
-main {
-    .section:nth-first-child{
-        padding-bottom: 200px;
-    }
-}
+// .section{
+//     width: 1200px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     padding-top: 94px;
+//     /* padding-bottom: 94px; */
+//     margin: 0px auto;
+// }
+
+// main {
+//     .section:nth-first-child{
+//         padding-bottom: 200px;
+//     }
+// }
