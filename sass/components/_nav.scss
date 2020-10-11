@@ -1,0 +1,119 @@
+nav{
+    display: flex;
+    justify-content: start;
+}
+
+.top-nav{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 93px;
+}
+
+.top-nav {
+    .item{
+        display: inline-block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: #212121;
+        transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.top-nav{
+    .item:hover, .item:focus{
+        color: #2196F3;
+    }
+}
+.top-nav .item::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: #2196F3;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-nav {
+    .item:hover::after, .item:focus::after{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    li + li{
+        margin-left: 50px;
+    }
+    li{
+        position: relative;
+    }
+    .item.active::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background: #2196F3;
+        border-radius: 2px;
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+address{
+    display: flex;
+    align-items: center;
+}
+
+.address{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    a{
+        text-decoration: none;
+        font-style: normal;
+        color: #757575;
+        transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    a:hover,
+    a:focus{
+    color: #2196F3;
+    }
+    li + li{
+        margin-left: 50px;
+    }
+    li a{
+        display: flex;
+        align-items: center;
+    }
+    .envelope{
+        width: 16px;
+        height: 12px;
+        fill: #757575;
+        margin-right: 10px;
+        transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    li:nth-child(1):hover .envelope{
+        fill: #2196F3;
+    }
+    .smartphone{
+        width: 10px;
+        height: 16px;
+        fill: #757575;
+        margin-right: 10px;
+        transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    li:nth-child(2):hover .smartphone{
+        fill: #2196F3;
+    }
+}

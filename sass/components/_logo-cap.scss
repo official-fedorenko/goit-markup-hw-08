@@ -1,0 +1,23 @@
+.logo{
+    font-family: Raleway, serif;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.logo{
+    & > span{
+        color: #2196F3;
+    }
+}
+
+.cap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    nav,address{
+        align-items: center;
+    }
+}
