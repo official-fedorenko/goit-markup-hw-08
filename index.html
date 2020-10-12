@@ -12,11 +12,13 @@
     <header>
         <div class="cap section">
             <a href="./index.html" class="logo"><span>Web</span>Studio</a>
-            <div class="menu" menu-modal>
-                <button class="button"><svg width="19px" height="19px" >
-                    <use href="./img/svg/social-sprite.svg#icon-krest" menu-modal-close></use>
-                    <use href="./img/svg/social-sprite.svg#icon-burger" menu-modal-open></use>
-                </svg> </button>
+            <div class="menu" top-menu-open >
+                <button class="button">
+                    <svg width="19px" height="19px" >
+                    <use href="./img/svg/social-sprite.svg#icon-krest" menu-close ></use>
+                    <use href="./img/svg/social-sprite.svg#icon-burger" menu-open ></use>
+                    </svg>
+                </button>
                 <div class="header-cap">
                     <nav>
                         <ul class="top-nav">
@@ -44,10 +46,10 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="feature-container">
             <ul class="feature">
                 <li>
-                    <svg class="antenna"><use href="./img/svg/advantages.svg#icon-antenna" class="ianth"></use></svg>
+                    <svg class="antenna" ><use href="./img/svg/advantages.svg#icon-antenna" class="ianth"></use></svg>
                     <h2>Внимание к деталям</h2>
                     <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                 </li>
@@ -67,19 +69,21 @@
                     <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
             </ul>
-            <h2>Чем мы занимаемся</h2>
-            <ul class="features-list">
-                <li><img src="./img/img1.jpg" alt="картинка как мы программируем" width="370px"><span class="description">Десктопные приложения</span></li>
-                <li><img src="./img/img2.jpg" alt="адаптируем софт под разные девайсы" width="370"><span class="description">Мобильные приложения</span></li>
-                <li><img src="./img/img3.jpg" alt="создаем интеррактивные интерфейсы" width="370"><span class="description">Дизайнерские решения</span></li>
-            </ul>
+            <div class="features-list hidden">
+                <h2>Чем мы занимаемся</h2>
+                <ul class="features-list">
+                    <li><img src="./img/img1.jpg" alt="картинка как мы программируем" width="370px"><span class="description">Десктопные приложения</span></li>
+                    <li><img src="./img/img2.jpg" alt="адаптируем софт под разные девайсы" width="370"><span class="description">Мобильные приложения</span></li>
+                    <li><img src="./img/img3.jpg" alt="создаем интеррактивные интерфейсы" width="370"><span class="description">Дизайнерские решения</span></li>
+                </ul>
+            </div>
         </section>
         <section class="bg-team">
             <div class="section">
                 <h2>Наша команда</h2>
                 <ul class="team">
                     <li>
-                        <img src="./img/igor-demyanenko.jpg" alt="Игорь Демьяненко" width="270">
+                        <img src="./img/igor-demyanenko.jpg" alt="Игорь Демьяненко" >
                         <ul>
                             <li class="name">Игорь Демьяненко</li>
                             <li class="position">Product Designer</li>
@@ -92,7 +96,7 @@
                         </ul>
                     </li>
                     <li>
-                    <img src="./img/olha-repina.jpg" alt="Ольга Репина" width="270">
+                    <img src="./img/olha-repina.jpg" alt="Ольга Репина" >
                         <ul>
                             <li class="name">Ольга Репина</li>
                             <li class="position">Frontend Developer</li>
@@ -105,7 +109,7 @@
                         </ul>
                     </li>
                     <li>
-                    <img src="./img/nikolay-tarasov.jpg" alt="Николай Тарасов" width="270">
+                    <img src="./img/nikolay-tarasov.jpg" alt="Николай Тарасов" >
                         <ul>
                             <li class="name">Николай Тарасов</li>
                             <li class="position">Marketing</li>
@@ -118,7 +122,7 @@
                         </ul>
                     </li>
                     <li>
-                    <img src="./img/michail-yermakov.jpg" alt="Михаил Ермаков" width="270">
+                    <img src="./img/michail-yermakov.jpg" alt="Михаил Ермаков" >
                         <ul>
                             <li class="name">Михаил Ермаков</li>
                             <li class="position">UI Designer</li>

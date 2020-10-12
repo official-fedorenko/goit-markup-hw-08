@@ -12,16 +12,18 @@
     <header>
         <div class="cap section">
             <a href="./index.html" class="logo"><span>Web</span>Studio</a>
-            <div class="menu" menu-modal>
-                <button class="button"><svg width="19px" height="19px" >
-                    <use href="./img/svg/social-sprite.svg#icon-krest" menu-modal-close></use>
-                    <use href="./img/svg/social-sprite.svg#icon-burger" menu-modal-open></use>
-                </svg> </button>
+            <div class="menu" top-menu-open >
+                <button class="button">
+                    <svg width="19px" height="19px" >
+                    <use href="./img/svg/social-sprite.svg#icon-krest" menu-close ></use>
+                    <use href="./img/svg/social-sprite.svg#icon-burger" menu-open ></use>
+                    </svg>
+                </button>
                 <div class="header-cap">
                     <nav>
                         <ul class="top-nav">
-                            <li class="active"><a href="./index.html" class="item">студия</a></li>
-                            <li><a href="./portfolio.html" class="item">портфолио</a></li>
+                            <li><a href="./index.html" class="item">студия</a></li>
+                            <li class="active"><a href="./portfolio.html" class="item">портфолио</a></li>
                             <li><a href="./index.html" class="item">контакты</a></li>
                         </ul>
                     </nav>
@@ -164,5 +166,6 @@
             </form>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
