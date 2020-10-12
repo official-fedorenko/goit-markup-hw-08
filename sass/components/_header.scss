@@ -16,13 +16,23 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
     border-bottom: 1px solid #ECECEC;
     
     .cap{
         display: flex;
         justify-content: space-between;
         width: 100%;
+
+        @media screen and (min-width: 480px) {
+            width: calc(100% - 30px);
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: calc(100% - 30px);
+            margin: 0 auto;
+        }
+
         .logo{
             font-family: Raleway, serif;
             color: #000000;
@@ -35,20 +45,23 @@ header{
             }
         }
 
-        @media screen and (min-width: 480px) {
-            width: calc(100% - 30px);
-            margin: 0 auto;
-        }
+    }
 
-        @media screen and (max-width: 480px) {
-            width: calc(100% - 30px);
-            margin: 0 auto;
-        }
+    .header-cap .top-nav a{
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 8px 0px;
+    color: #2196F3;
     }
 
     .header-cap{
         position: absolute;
         top: 60px;
+        left: 0;
         width: 100%;
         height: 393px;
         padding: 60px 0px;
@@ -59,7 +72,51 @@ header{
         justify-content: space-between;
         background: #ffffff;
         box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.4);
-        display: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: 250ms;
+        overflow-y: scroll;
+    }
+
+    .menu .button:hover{
+        fill: #2196F3;
+    }
+
+    .menu .button{
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .menu svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        padding-top: 5px;
+    }
+
+
+    .menu.is-open .header-cap{
+        opacity: 1;
+        pointer-events: stroke;
+    }
+
+    .menu.is-open svg use:last-child{
+        opacity: 0;
+    }
+
+    .menu svg use:last-child{
+        opacity: 1;
+    }
+
+    .menu.is-open svg use:first-child{
+        opacity: 1;
+    }
+
+    .menu svg use:first-child{
+        opacity: 0;
     }
 
     .top-nav{
@@ -67,9 +124,37 @@ header{
         flex-direction: column;
         align-items: center;
 
+        li:after{
+            content: " ";
+            display: block;
+            width: 0%;
+            height: 4px;
+            background: #2196F3;
+            border-radius: 4px;
+            transition: 250ms;
+        }
+
+        .active:after{
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: #2196F3;
+            border-radius: 4px;
+            transition: 250ms;
+        }
+
+        li:hover:after{
+            width: 100%;
+        }
+
         li + li{
             margin-top: 40px;
         }
+    }
+
+    address{
+        margin-top: 40px;
     }
 
     .address{
@@ -80,5 +165,40 @@ header{
         li + li{
             margin-top: 16px;
         }
+
+        a{
+            text-decoration: none;
+            font-style: normal;
+            color: #757575;
+        }
+
+        li a{
+            display: flex;
+            align-items: center;
+        }
+
+        .envelope{
+            fill: #757575;
+            margin-right: 10px;
+        }
+
+        li:nth-child(1):hover .envelope{
+            fill: #2196F3;
+        }
+
+        .smartphone{
+            fill: #757575;
+            margin-right: 10px;
+        }
+
+        li:nth-child(2):hover .smartphone{
+            fill: #2196F3;
+        }
+    }
+
+    .address a:hover,
+    .address a:focus{
+        color: #2196F3;
     }
 }
+

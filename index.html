@@ -12,12 +12,15 @@
     <header>
         <div class="cap section">
             <a href="./index.html" class="logo"><span>Web</span>Studio</a>
-            <button>x</button>
-        </div>
+            <div class="menu" menu-modal>
+                <button class="button"><svg width="19px" height="19px" >
+                    <use href="./img/svg/social-sprite.svg#icon-krest" menu-modal-close></use>
+                    <use href="./img/svg/social-sprite.svg#icon-burger" menu-modal-open></use>
+                </svg> </button>
                 <div class="header-cap">
                     <nav>
                         <ul class="top-nav">
-                            <li><a href="./index.html" class="item active">студия</a></li>
+                            <li class="active"><a href="./index.html" class="item">студия</a></li>
                             <li><a href="./portfolio.html" class="item">портфолио</a></li>
                             <li><a href="./index.html" class="item">контакты</a></li>
                         </ul>
@@ -29,6 +32,8 @@
                         </ul>
                     </address>
                 </div>
+            </div>
+        </div>
     </header>
     <main>
         <section class="bg-slider">
