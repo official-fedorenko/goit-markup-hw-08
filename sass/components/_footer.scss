@@ -5,16 +5,21 @@ footer{
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 480px;
     display: flex;
     flex-direction: column;
-    display: none;
+
+    @media screen and (min-width:480px) {
+        max-width:480px;
+    }
+
+    @media screen and (max-width:479px) {
+        max-width:480px;
+    }
 }
 
 .footer-container{
     padding-top: 60px;
     padding-bottom: 60px;
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0px auto;
@@ -22,8 +27,28 @@ footer{
     flex-direction: column;
 }
 
-.footer-container nav a{
-    color: #ffffff;
+.footer-container-1 address{
+    text-align: center;
+}
+
+.footer-container {
+    nav a{
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+        span{
+            color: #2196F3;
+        }
+    }
+
+    nav{
+        text-align: center;
+    }
 }
 
 .address-footer{
@@ -36,6 +61,10 @@ footer{
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
+
+    li + li {
+        margin-top: 8px;
+    }
 }
 
 .address-footer a{
@@ -50,17 +79,20 @@ footer{
 }
 
 .social-footer{
-    font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
     color: #ffffff;
     font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 .social-footer h3{
     margin: 0;
     padding: 0;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -123,7 +155,6 @@ footer{
 }
 
 .footer-email-form{
-    width: 480px;
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.03em;
@@ -132,12 +163,17 @@ footer{
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     label{
         width: 100%;
-        outline: 1px solid teal;
         align-items: center;
         flex-direction: column;
+
+        input{
+            margin-bottom: 30px;
+            outline: none;
+        }
     }
 }
 
