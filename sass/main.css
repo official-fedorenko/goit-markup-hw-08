@@ -10,7 +10,7 @@ body ul {
 
 @media screen and (min-width: 480px) {
   section {
-    max-width: 480px;
+    max-width: 479px;
     margin: 0px auto;
   }
 }
@@ -382,8 +382,22 @@ header .address a:focus {
   background: #188CE8;
 }
 
-.hidden {
-  display: none;
+@media screen and (max-width: 479px) {
+  .hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .hidden {
+    display: block;
+  }
 }
 
 .feature-container {
@@ -502,20 +516,13 @@ header .address a:focus {
           flex-direction: column;
 }
 
-@media screen and (min-width: 480px) {
-  .team img {
-    width: 450px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .team img {
-    width: 450px;
-  }
+.team img {
+  width: 100%;
+  display: block;
 }
 
 .team > li {
-  width: 450px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid none;
   -webkit-border-radius: 0px 0px 4px 4px;
@@ -523,6 +530,19 @@ header .address a:focus {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding-bottom: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .team > li {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .team > li {
+    max-width: 100%;
+    color: red;
+  }
 }
 
 .team ul {
@@ -615,7 +635,6 @@ header .address a:focus {
   width: 100%;
   padding: 60px 0px;
   padding-bottom: 94px;
-  margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -723,10 +742,17 @@ header .address a:focus {
 
 .clients li:last-child {
   margin-bottom: 0px;
+  height: 90px;
 }
 
 .clients li:nth-last-child(2) {
   margin-bottom: 0px;
+}
+
+@media screen and (max-width: 479px) {
+  .clients li:nth-last-child(2) {
+    margin-bottom: 30px;
+  }
 }
 
 .clients a {
@@ -768,6 +794,7 @@ footer {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: none;
 }
 
 .footer-container {
