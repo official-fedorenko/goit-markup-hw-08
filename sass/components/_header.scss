@@ -1,5 +1,7 @@
 header{
 
+    z-index: 9999;
+
     @media screen and (min-width: 480px) {
         max-width: 480px;
         height: 60px;
