@@ -3,15 +3,11 @@
     height: 400px;
     background: #000;
     color: #fff;
+    background-image: url(/img/h-img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain 100%;
 
     @include flex;
-
-    @media screen and (min-width:480px) {
-        background-image: url(/img/header-img.jpg);
-    }
-    @media screen and (max-width:479px) {
-        background-image: url(/img/header-img.jpg);
-    }
     
 
     h1{
@@ -72,6 +68,7 @@
     }
 }
 
+
 .feature-container{
 
     font-weight: normal;
@@ -82,12 +79,31 @@
 
     .feature{
         margin-top: 60px;
+        
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li{
+            @media screen and (min-width:768px) {
+                width: calc((100% - 30px) / 2);
+                display: flex;
+                font-display: row;
+                flex-wrap: wrap;
+            }
+        } 
     }
 
     ul li{
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media screen and (min-width:768px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     h2{
@@ -168,8 +184,14 @@
         display: block;
     }
 
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     & > li{
-        width: 100%;
+        width: 90%;
+        margin: auto;
         background: #ffffff;
         border: 1px solid none;
         border-radius: 0px 0px 4px 4px;
@@ -185,6 +207,18 @@
             max-width: 100%;
             color: red;
         }
+        @media screen and (min-width:768px) {
+            width: calc((100% - 60px) / 2);
+            display: flex;
+            font-display: row;
+            flex-wrap: wrap;
+
+            margin-bottom: 30px;
+
+            &:nth-last-child(1), &:nth-last-child(2){
+                margin-bottom: 0px;
+            }
+        }
     }
 
     ul{
@@ -192,6 +226,17 @@
         text-align: center;
         padding-top: 30px;
         padding-bottom: 16px;
+
+        @media screen and (min-width:768px) {
+            &:nth-of-type(1){
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+
     }
 
     .name{
@@ -221,6 +266,10 @@
 
     & > li + li{
         margin-top: 30px;
+
+        @media screen and (min-width:768px) {
+            margin-top: 0;
+        }
     }
 }
 
@@ -355,6 +404,10 @@
         margin-bottom: 0px;
 
         @media screen and (max-width:479px) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width:768px) {
             margin-bottom: 30px;
         }
     }

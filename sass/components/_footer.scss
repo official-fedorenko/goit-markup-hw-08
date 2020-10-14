@@ -15,6 +15,10 @@ footer{
     @media screen and (max-width:479px) {
         max-width:480px;
     }
+
+    @media screen and (min-width:768px) {
+        max-width:768px;
+    }
 }
 
 .footer-container{
@@ -25,11 +29,32 @@ footer{
     margin: 0px auto;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width:768px) {
+        width: 100%;
+    }
+
+    div{
+        @media screen and (min-width:768px) {
+            display: flex;
+            width: 100%;
+        }
+    }
 }
 
-.footer-container-1 address{
-    text-align: center;
-}
+.footer-container-1{
+
+    address{
+        text-align: center;
+        
+    }
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+    }
+} 
+    
 
 .footer-container {
     nav a{
@@ -87,6 +112,13 @@ footer{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 60px;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
 }
 
 .social-footer h3{
@@ -94,6 +126,13 @@ footer{
     padding: 0;
     margin-top: 60px;
     margin-bottom: 20px;
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-top: 0px;
+    margin-bottom: 0px;
+    }
 }
 
 .social-footer ul{
@@ -103,6 +142,10 @@ footer{
     justify-content: center;
     align-items: center;
     list-style-type: none;
+
+    @media screen and (min-width:768px) {
+        margin-top: 20px;
+    }
 }
 
 .social-footer li{
@@ -164,6 +207,10 @@ footer{
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    @media screen and (min-width:768px) {
+        margin-top: 60px;
+    }
 
     label{
         width: 100%;
