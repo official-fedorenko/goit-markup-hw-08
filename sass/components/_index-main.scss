@@ -4,16 +4,16 @@
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     @media screen and (min-width:480px) {
-        background-image: url(/img/header-img-480.jpg);
+        background-image: url(../img/header-img-480.jpg);
     }
     @media screen and (max-width:479px) {
-        background-image: url(/img/header-img-480.jpg);
+        background-image: url(../img/header-img-480.jpg);
     }
     @media screen and (min-width:768px) {
-        background-image: url(/img/header-img-768.jpg);
+        background-image: url(../img/header-img-768.jpg);
     }
     @media screen and (min-width:1200px) {
-        background-image: url(/img/header-img-1200.jpg);
+        background-image: url(../img/header-img-1200.jpg);
         height: 600px;
     }
     // background-image: url(/img/h-img.jpg);
