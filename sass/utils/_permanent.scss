@@ -20,6 +20,22 @@ section{
         max-width: 768px;
          margin: 0px auto;
      }
+
+     @media screen and (min-width:1200px) {
+        max-width: 1600px;
+        margin: 0px auto;
+        h2{
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.16;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: #212121;
+            margin: 0;
+            margin-bottom: 50px;
+            margin-top: 90px;
+        }
+     }
 }
 
 // footer{
